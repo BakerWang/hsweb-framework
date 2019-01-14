@@ -5,9 +5,11 @@
     <parent>
         <artifactId>hsweb-framework</artifactId>
         <groupId>org.hswebframework.web</groupId>
-        <version>3.0-SNAPSHOT</version>
+        <version>3.0.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <description>消息相关模块(试行)</description>
 
     <artifactId>hsweb-message</artifactId>
     <packaging>pom</packaging>
@@ -16,7 +18,6 @@
         <module>hsweb-message-jms</module>
         <module>hsweb-message-redis</module>
         <module>hsweb-message-websocket</module>
-        <module>hsweb-message-memory</module>
     </modules>
 
 

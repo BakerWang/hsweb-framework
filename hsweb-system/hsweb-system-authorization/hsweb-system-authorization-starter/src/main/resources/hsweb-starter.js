@@ -26,12 +26,15 @@ var info = {
 
 //版本更新信息
 var versions = [
-    // {
-    //     version: "3.0.0",
-    //     upgrade: function (context) {
-    //         java.lang.System.out.println("更新到3.0.2了");
-    //     }
-    // }
+    {
+        version: "3.0.4",
+        upgrade: function (context) {
+            var database = context.database;
+            database.createOrAlter("s_user_setting")
+                .addColumn().name("permission").varchar(32).comment("用户可操作权限").commit()
+                .commit();
+        }
+    }
 ];
 var JDBCType = java.sql.JDBCType;
 
@@ -161,7 +164,7 @@ function install(context) {
         .addColumn().name("setting_id").varchar(32).notNull().comment("自定义配置id").commit()
         .addColumn().name("create_time").datetime().notNull().comment("创建时间").commit()
         .addColumn().name("update_time").datetime().comment("创建时间").commit()
-        .comment("角色表").commit();
+        .comment("用户设置表").commit();
 }
 
 //设置依赖

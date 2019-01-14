@@ -23,9 +23,12 @@
     <parent>
         <artifactId>hsweb-commons</artifactId>
         <groupId>org.hswebframework.web</groupId>
-        <version>3.0-SNAPSHOT</version>
+        <version>3.0.4</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <description>通用增删改查-通用Dao模块</description>
 
     <artifactId>hsweb-commons-dao</artifactId>
     <packaging>pom</packaging>
